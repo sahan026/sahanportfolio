@@ -1,0 +1,1178 @@
+<html>
+    <head>
+      <title>Sahan Hansaja</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+    <style>
+        body {
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #090909;
+        font-family: "Lato", sans-serif;
+        transition: #090909 .5s;
+        }
+        .tab {
+        overflow: hidden;
+        border: 0px solid #333;
+        background-color: #090909;
+        }
+        .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        float: left;
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        .tab button:hover {
+        border-bottom: 4px solid rgb(60, 0, 255);
+        color: rgb(255, 255, 255);
+        }
+        .tab button.active {
+        border-bottom: 4px solid rgb(254, 2, 2);
+        color: rgb(249, 6, 6);
+        }
+        .box {
+          background-image:linear-gradient(rgba(20, 20, 20, 0.5), rgba(19, 18, 18, 0.5)), url("paper.jpg");
+        background-color: rgb(73, 72, 72);
+        width: 65%;
+        border: 15px solid #090909;
+        padding: 50px;
+        margin: 20px;
+        }
+        .img {
+        float: right;
+        margin: 5px;
+        }
+        .space1{
+          word-spacing: 10px;
+        }
+        .space2{
+          word-spacing: 10px;
+        }
+        .tabcontent 
+        {
+        display: none;
+        border: 0px solid #ccc;
+        border-top: none;
+        }
+        input[type=text], select {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #265d17;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        .warning {
+        border-radius: 3px;
+        background-color: #535151;
+        padding: 9px;
+        }
+        form 
+        {
+        text-align: right;
+        }
+        input {
+        width: 100px;
+        }
+        .button {
+        background-color: #f61d00;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;            
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 50px;
+        cursor: pointer;
+        }
+            
+        .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px 8px;
+        border-radius: 50%;
+        }
+
+        .fa:hover {
+        opacity: 0.7;
+        }
+
+        .fa-facebook {
+        background: #3f3f3f;
+        color: white;
+        }
+
+        .fa-twitter {
+        background: #3f3f3f;
+        color: rgb(255, 255, 255);
+        }
+
+        .fa-google {
+        background: #000000;
+        color: rgb(255, 4, 4);
+        }
+        .fa-linkedin {
+        background: #3f3f3f;
+        color: white;
+        }
+        .fa-instagram {
+        background: #3f3f3f;
+        color: white;
+        }
+        .fa-whatsapp {
+        background: #3f3f3f;
+        color: white;
+        }
+        .fa-home{
+        background: #3f3f3f;
+        color: white;
+        }
+        .fa-search{
+        background: #3f3f3f;
+        color: white;
+        }
+        .fa-bars{
+        background: #3f3f3f;
+        color: white;
+        }
+        .btn {
+        background-color: rgba(248, 8, 8, 0.686);
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 5px 50px;
+        cursor: pointer;
+        font-size: 20px;
+        }
+        a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        }
+
+        a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+        .warning dl:hover {
+          background-color: #f60303;
+          color: rgba(247, 247, 247, 0.848);
+        }
+        .warning dl {
+          float: left;
+          background-color: #4b4949f4;
+          color: #fffefe;
+          text-align: left;
+          border: 8px solid #090909;
+          padding: 100px 80px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+ 
+        .text {
+          color: rgba(243, 9, 9, 0.651);
+          font-size: 60px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        .text1 {
+          color: rgb(254, 252, 252);
+          font-size: 43px;
+          position: absolute;
+          top: 12%;
+          left: 7.5%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: left;
+        }
+        .topnav-right {
+          float: right;
+        }
+        .topnav {
+          overflow: hidden;
+          background-color: #090909;
+        }
+
+        .topnav a {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          float: left;
+          color: #ffffff;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          }
+
+          .topnav a:hover {
+            border-bottom: 4px solid rgb(60, 0, 255);
+          }
+
+          .topnav a.active {
+            border-bottom: 4px solid rgb(254, 2, 2);
+            color: rgb(250, 5, 5);
+          }
+
+          .topnav-right {
+            float: right;
+          }
+          .topnav-center {
+            float: center;
+          }   
+          .center {
+            margin: 5%;
+            width: 85%;
+            border: 0px solid #73AD21;
+            padding: 50px;
+          }
+          .botom {
+            float:left;
+            margin:0%;
+            width: 0%;
+            border: 0px solid #fafbf9;
+            padding: 10px;
+          }
+          .abottom
+          {
+            position: absolute;
+            bottom: 3;
+            right: 0;
+          }
+          body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+          .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+          .fa-anchor,.fa-coffee
+          {
+          font-size:200px
+          }
+          .wbody
+          {
+            background-image:" gf.JPGE";
+          }
+          .mySlides
+          {
+            display: none
+          }
+          img 
+          {
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+          }
+          .slideshow-container
+          {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 10%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+          .next
+          {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+          }
+
+          .prev:hover, .next:hover {
+            background-color: rgba(3, 47, 243, 0.988);
+          }
+
+          .text {
+            color: #ffffff;
+            font-size: 35px;
+            padding: 0px 12px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            text-align: bottom;
+          }
+          .numbertext {
+            color: #ffffff;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+          }
+          .fade {
+              animation-name: fade;
+              animation-duration: 1.5s;
+          }
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+
+          @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+          }
+
+          @media only screen and (max-width: 300px) {
+            .prev, .next,.text ,.box,.hero-text{font-size: 11px}
+          }
+
+          .hero-image {
+            background-image: linear-gradient(rgba(92, 91, 91, 0.5), rgba(85, 84, 84, 0.5)), url("mys.jpg");
+            height: 60%;
+            max-width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
+
+          .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(5, 1, 248);
+          }
+
+          .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #757171;
+            text-align: center;
+            cursor: pointer;
+          }
+
+          .hero-text button:hover { 
+            background-color: #555;
+            color: white;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          .row{
+            background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(107, 106, 106, 0.5)), url("pa.jpg");
+          }
+
+          input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #000000;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+
+          input[type=submit] {
+            background-color: #f60000;
+            color: rgb(18, 17, 17);
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+          }
+
+          input[type=submit]:hover {
+            background-color: #ff0000;
+          }
+
+          .column {
+            background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(107, 106, 106, 0.5)), url("utx.jpg");
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+          }
+          .column1 {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+          }
+
+          .row:after {
+            
+            content: "";
+            display: table;
+            clear: both;
+            
+          }
+          @media screen and (max-width: 60px) {
+            .column, input[type=submit] {
+              width: 100%;
+              margin-top: 2px;
+            }
+          }
+          @media only screen and (max-width: 800px) {
+            .box ,h1{float: none;
+              width: auto;
+            font-size: 15px;
+               padding: 25px;
+                  margin: 5px;}
+          }
+          
+           @media only screen and (max-width: 800px) {
+            .hero-image {  height:none;
+                      width: 100%;
+                  margin: 5px;}
+          }
+          @media screen and (max-width : 800px)
+          {
+            .hero-text
+            {float: none;
+            width: 100%;
+              font:normal;
+            }
+          }
+          .topnav-right {
+            width: 100%;
+            float: none;
+            text-align: left;
+          }
+          @media screen and (max-width: 800px) {
+          .img {
+          font: 20%;
+          float: none;
+          width: 30%;
+          height: 40%;
+          
+            }
+          }
+          @media screen and (max-width: 800px) {
+          .tab {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #090909;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+
+          .tab button {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fbf3f3;
+            display: block;
+            transition: 0.3s;
+          }
+
+          .tab button:hover {
+            color: #310af3;
+          }
+
+          .tab .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 30px;
+            margin-left: 50px;
+          }
+          }
+          .alert {
+          padding: 5px;
+          background-color: #f44336;
+          color: rgb(64, 63, 63);
+          }
+
+          .closebtn {
+          margin-left: 10px;
+          color: rgb(238, 14, 14);
+          font-weight: bold;
+          float: right;
+          font-size: 16px;
+          line-height: 15px;
+          cursor: pointer;
+          transition: 0.3s;
+          }
+
+          .closebtn:hover {
+            color: rgb(43, 6, 227);
+          }
+          .loader {
+            border: 10px solid #1f1e1e;
+            border-radius: 50%;
+            border-top: 1px solid #3498db;
+            width: 10px;
+            height: 20px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+          }
+
+            @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+            @media screen and (max-width: 800px) {
+            font {
+            float: none;
+            width: 100%;
+            font-size: 15px;
+              }
+          }
+          @media screen and (max-width: 800px) {
+          .fa {
+            float: none;
+            width: auto;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 5px 2px;
+              }
+          }
+        
+          @media screen and (max-width: 800px) {
+          p,dd,dt{
+            float: none;
+            width: auto;
+            size:2px;
+              }
+          }
+          ul {
+          list-style: none;
+          }
+
+          ul li::before {
+            content: "\2022";
+            color: red;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+          }
+              * {box-sizing: border-box}
+
+            .container {
+              width: 50%;
+              height: 28px;
+              background-color: #ddd;
+              border-radius: 5px;
+            }
+
+            .skills {
+              text-align: right;
+              padding-top: 0.001px;
+              padding-bottom: 1px;
+              height: 28px;
+              color: white;
+            }
+
+            .html {width: 90%; background-color: #5602ff;}
+            .css {width: 80%; background-color: #5602ff;}
+            .js {width: 65%; background-color: #5602ff;}
+            .php {width: 60%; background-color: #5602ff;}
+            .python {width: 71%; background-color: #5602ff;}
+            .java {width: 60%; background-color: #5602ff;}
+            .photo {width: 46%; background-color: #5602ff;}
+            @media screen and (max-width: 800px) {
+            * {box-sizing: border-box}
+
+            .container {
+              width: 50%;
+              height: 23px;
+              background-color: #ddd;
+              
+            }
+
+            .skills {
+              text-align: right;
+              padding-top: 0.001px;
+              padding-bottom: 1px;
+              height: 23px;
+              color: white;
+            }
+            @media screen and (max-width: 800px) {
+            .h1,h2 {
+              float: none;
+              width: 100%;
+              font-size: 15px;
+                }
+            }
+            }
+
+            @keyframes example {
+              from {background-color: rgb(23, 23, 23);}
+              to {background-color: rgb(87, 87, 87);}
+            }
+
+            @keyframes example {
+              from {background-color: rgb(23, 23, 23);}
+              to {background-color: rgb(87, 87, 87);}
+            }
+            .h1.h2 {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+
+            @media screen and (max-width: 800px) {
+            .btn {
+              border: none;
+              color: rgb(0, 0, 0);
+              padding: 5px 20px;
+              cursor: pointer;
+              font-size: 11px;
+              } 
+            }@media screen and (max-width: 800px){            
+            .prev, .next {
+              float: none;
+              width: 100%;
+              cursor: pointer;
+              position: absolute;
+              top: 3%;
+              width: auto;
+              padding: 16px;
+              margin-top: -22px;
+              font-weight: bold;
+              font-size: 15px;
+              }
+          }
+          @media screen and (max-width: 900px){ 
+            .text {
+            float:none;
+            top: 47%;
+            font-size: 25px;
+            padding: 0px 12px;
+            position: absolute;
+            bottom: 0px;
+            width: auto;
+            text-align: bottom;
+            }
+          } 
+          @media screen and (max-width: 500px){ 
+            .text {
+            float:none;
+            top: 41%;
+            font-size: 20px;
+            padding: 0px 12px;
+            position: absolute;
+            bottom: 0px;
+            width: auto;
+            text-align: bottom;
+            }
+          }
+          @media screen and (max-width: 400px){ 
+            .text {
+            float:none;
+            top: 38%;
+            font-size: 18px;
+            padding: 0px 12px;
+            position: absolute;
+            bottom: 0px;
+            width: auto;
+            text-align: bottom;
+            }
+          }
+          .top-left {
+          float: left;
+          }
+          @media screen and (max-width: 800px) {
+            .btno {
+              border: none;
+              color: rgb(0, 0, 0);
+              padding: 5px 8px;
+              cursor: pointer;
+              font-size: 11px;
+              } 
+            }
+            .btno {
+              border: none;
+              color: rgb(0, 0, 0);
+              padding: 5px 20px;
+              cursor: pointer;
+              font-size: 11px;
+              }
+              .boxo {
+              background-color: rgb(73, 72, 72);
+              width: 100%;
+              border: 0px;
+              padding: 40px;
+              margin: 0;
+              }
+              .po{
+                color:#ffffff;
+              }
+              @media screen and (max-width: 800px) {
+            .boxo {
+              float:none;
+              width: 100%;
+              } 
+            }@media screen and (min-width: 800px) {
+            .dam {
+              visibility: hidden;
+
+                }
+            }
+              @media screen and (min-width: 800px) {
+            .gh {
+                display:inline-block;
+                visibility: hidden;
+
+                }
+              }
+              @media screen and (min-width: 800px) {
+                .tab,.tab button,.tab button:hover,.tab button.active{
+                  display: inline;
+                }
+              }
+
+
+              </style>
+    </head>
+    <body>
+      
+        <div class="tab"div id="mySidenav" >
+          <div class="gh">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><font size="12px">Close</font></a></div>
+            <button class="tablinks" onclick="sahan(event, 'home')" id="defaultOpen">Home </button>
+            <button class="tablinks" onclick="sahan(event, 'aboutme')">About me</button>
+            <button class="tablinks" onclick="sahan(event, 'services')">My Services</button>
+            <button class="tablinks" onclick="sahan(event, 'mywork')">My Work</button>
+            <button class="tablinks" onclick="sahan(event, 'contact')">Contact me</button>
+            </div>
+            <div class="dam">
+            <span style="font-size:20px;cursor:pointer;color:white" onclick="openNav()">&#9776; Menu</span>
+          </div>
+          </div>
+
+          <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+              document.body.style.backgroundColor = "white";
+            }
+            </script>
+
+          </div>
+          
+          <div id="home" class="tabcontent">
+            
+            <div class="hero-image">
+              <div class="hero-text">
+                <font size="4">
+                  <font size="36"color="red"><b>Hi,I'm ,</b> </font>
+                <br>
+                  <font size="42" color="white"><i>Sahan Hansaja</i></font><br>
+                  <font size="36"color="white">From Sri Lanka</font><br>
+                  <font size="4"><font color="blue"><i><b>BSc (Hons) in Information Technology <br>
+                    Data Scientists</i></b></font></font><align="center"><br><br><br>
+                <button>Hire me</button>
+                  </div>
+          </div>
+          <font color="red" size="5px">
+            <h2><center>MY Degree details</center></h2><br>
+            <font color="blue">
+            <h3>Why I choose Data Science?</h3>
+          <br>
+          
+
+          <font color="white">
+          <p>The future world is a computerized world. I think software, hardware and live software in one machine. Artificial intelligence is now trying to change the world.
+            Data science is critical to artificial intelligence. Choosing data science means becoming an expert in creating positive change. As a data scientist,
+             I can provide leaders with the valuable information they need to make confident decisions, advance businesses, and change communities.
+            And much more
+          </p>
+          <br>
+          <ul>
+          <dt><li>Data Science:-</dt>
+          <dd>Data science is the study of data to extract meaningful insights for business. It is a multidisciplinary approach that combines principles and 
+            practices from the fields of mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data.</dd></li>
+           <dt> <li>Introduction Data Science:-</dt>
+          <dd>Data Science is about data gathering, analysis and decision-making. Data Science is about 
+            finding patterns in data, through analysis, and make future predictions. By using Data Science, 
+            companies are able to make: Better decisions (should we choose A or B)</dd></ul></li></font><br>
+            <div class="boxo">
+              <font color="white"size="3px"><center><i>powerd by@</i><b> Sahan hansaja</b><br>
+              <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+              <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+              <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a><br>
+              <font size="2px">
+            <i>sahanhansaja026@gmail.com</i></center></font>
+            </div>
+          </div>
+        </div>
+          <div id="aboutme" class="tabcontent"style="display:none">
+            <font color="white"><h1>So, who am I?</h1></font>
+            <img src="w2.jpg"><br>
+            <div class="img">
+              <img src="ya.png"width="300"hight="500"align="right">
+              </div>
+            <div class="box">
+              <font color="white">
+              <h1 style="font-size:auto;">Undergraduate Student</h1>
+              <p style="font-size: auto;">I am an undergraduate student of Sri Lanka
+                 Technology Campus - School of Computer and Information Technology. My secondary and primary education
+                Ananda Academy National School - Mathugama, I am Sri Lankan. I have done and I provide many services. 
+                I am phptographer, web designer, JAVA and Python programmer. </p>
+              <br><h4>My Hobbies</h4>
+              <ul>
+                <li>drowing pictures</li>
+                <li>reading books</li>
+                <li>swimging</li>
+                <li>web designing</li>
+                </ul>
+              
+              <div class="space1">
+              <i class="fa fa-map-marker" style="font-size:38px;color:rgb(245, 243, 243)"><font color="white"></i><b><i>:location</b>--Mathugama</i><br></font>
+              <i class="fa fa-calendar" style="font-size:38px;color:rgb(245, 243, 243)"<font color="white"></i><b><i>:Age</b>--20</i></font>
+             
+            </div>
+              </font>
+              </div><br>
+          
+
+              <div class="boxo">
+                <font color="white"size="3px"><center><i>powerd by@</i><b> Sahan hansaja</b><br>
+                <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+                <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+                <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a><br>
+                <font size="2px">
+               <i>sahanhansaja026@gmail.com</i></center></font>
+              </div>
+          </div>
+            <div id="services" class="tabcontent"style="display:none">
+              <font color="white"><h1>My services<h1></font><br>
+                <font color="red"size="5px">
+                <h2> I am a programmer</h2>
+                <font color="white">
+                <dt>Who is the programmer</dt> 
+                  <dd>
+                  Programmers write code for computer programs and mobile applications. 
+                They also are involved in maintaining, debugging and troubleshooting systems and software to 
+                ensure that everything is running smoothly.</dd></font>
+              <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="gf.jpg" style="width:100%">
+                  <div class="text">Programing Languages</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="java.jpg" style="width:100%">
+                  <div class="text">Java Programing</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="rrr.png" style="width:100%">
+                  <div class="text">Python Programing</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="ty.jpg" style="width:100%">
+                  <div class="text">Web Development</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="p1.jpg" style="width:100%">
+                  <div class="text">Photo Editing</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+                <script>
+                  let slideIndex = 0;
+                  showSlides();
+                  
+                  function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 2000); 
+                  }
+                  </script>     
+                  <br>
+                <font color="white"size="5px">
+                  <br>
+                  <br>
+                
+                  <br>
+                <h2>Python</h2>
+                <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
+                  Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), 
+                  object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.</p><br>
+                  <h2>JAVA</h2>
+                 <p> Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. 
+                  It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA),meaning that compiled Java code can run on all
+                   platforms that support Java without the need to recompile.Java applications are typically compiled to bytecode that can run on any 
+                   Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities
+                    than either of them. The Java runtime provides dynamic capabilities  that are typically not available in traditional compiled languages. As of 2019, Java was 
+                    one of the most popular programming languages in use according to GitHub, particularly 
+                  for client–server web applications, with a reported 9 million developers</p>
+                  <br>
+                  <h2>What Is Web Development?</h2>
+                  <p>Web development, also known as website development, refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser. 
+                    It may, however, also include web design, web programming, and database management.
+                    Web development is closely related to the job of designing the features and functionality of apps (web design). The term development is usually reserved for the actual construction of these things .                    
+                    The basic tools involved in web development are programming languages called HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript. There are, however, 
+                    a number of other programs used to “manage” or facilitate the construction of sites that would otherwise have to be done “from scratch” by writing code.
+                     A number of content management systems (CMS) fall into this category, including WordPress, Joomla!, Drupal, TYPO3, and Adobe Experience Manager, among others.</p><br>
+                </font>    
+              </div>
+                <font color="red">
+
+                  <h1><i>My Skills</i></h1></font>
+                  <font color="white">
+
+                  <p>Python</p>
+                  <div class="container">
+                    <div class="skills css">71%</div>
+                    </div><br>
+
+     
+                  <p>java</p>
+                  <div class="container">
+                    <div class="skills php">60%</div>
+                  </div><br>
+                  
+     
+                  <p>HTML</p>
+                  <div class="container">
+                    <div class="skills html">90%</div>
+                  </div><br>
+                  
+                  <p>CSS</p>
+                  <div class="container">
+                    <div class="skills css">80%</div>
+                  </div><br>
+                  
+                  <p>JavaScript</p>
+                  <div class="container">
+                    <div class="skills js">65%</div>
+                  </div><br>
+                  
+                  <p>PHP</p>
+                  <div class="container">
+                    <div class="skills php">60%</div>
+                  </div><br>
+                  <p>Photo editing</p>
+                  <div class="container">
+                    <div class="skills photo">46%</div>
+                  </div><br>
+                 </font>
+                 <br><br>
+                <div class="boxo">
+                  <font color="white"size="3px"><center><i>powerd by@</i><b> Sahan hansaja</b><br>
+                  <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+                  <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+                  <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a><br>
+                  <font size="2px">
+                <i>sahanhansaja026@gmail.com</i></center></font>
+                </div>
+                </div>
+                
+            <div id="mywork" class="tabcontent"style="display:none">
+             <font color="white"><h1> My Works</h1></font><br>
+             <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+              <div class="w3-third w3-margin-bottom">
+                <img src="bill.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                  <p><b>Sofeware Development</b></p>
+                  <p class="w3-opacity">billing software for business</p>
+                  <p>biling software to business.it create a Python language and My SQL data bases</p>
+                  <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See more...</button>
+                </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <img src="web.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white">
+                    <p><b>Web Design</b></p>
+                    <p class="w3-opacity">Personal Portfolio Website</p>
+                    <p>my Personal Portfolio Website was created by me.HTML ,CSS and Java script to use to create it</p>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See more...</button>
+                  </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                  <img src="p2.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+                  <div class="w3-container w3-white">
+                    <p><b>Photo Editing</b></p>
+                    <p class="w3-opacity">Photoshop photo editer</p>
+                    <p>Adobe Photoshop use photos editing,and coreldraw softwares are use to editting</p>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">See more...</button>
+                  </div>
+                </div>
+                </div>
+
+
+
+                <div class="boxo">
+                  <font color="white"size="3px"><center><i>powerd by@</i><b> Sahan hansaja</b><br>
+                  <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+                  <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+                  <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a>
+            <br><font size="2px">
+               <i>sahanhansaja026@gmail.com</i></center></font>
+                </div>
+
+
+          </div>
+          <div id="contact" class="tabcontent"style="display:none">
+            <font color="white"><h1>Contact me</h1></font>
+            <br>
+           
+            <i class="fa fa-envelope-open" style="font-size:28px;color:red"><font color="white">sahanhansaja026@gmail.com</font></i><br>
+            <i class="fa fa-phone" style="font-size:28px;color:red"><font color="white">0717735442</font></i><br>
+            
+            <a href="https://www.facebook.com/sahan.hansaja.50?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+            <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+            <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a><br>
+          
+            <div class="warning">
+              <div style="text-align:center">
+                <font color="white">
+                <h2>Contact Me</h2>
+                <p> leave us a message:</p>
+              </div>
+              <div class="row">
+                <div class="column1">
+                  <img src="contact_me.jpg" style="width:100%">
+                </div>
+                <script type="text/javascript">
+                function popup(){
+                  alert("Are you want tosubmit your comment?")
+                }
+                </script>
+                <div class="column">
+                  <form action="v1.php">
+                    <label for="fname"><font color="black"><b><i>First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">Country</label></font>
+                    <select id="country" name="country">
+                      <option value="Sri Lanka">Sri Lanka</option>
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <font color="black">
+                    <label for="subject"><b><i>comment</b></i></label></font>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    
+                    <div class="top-left">
+                      <div class="btno">
+                    <input type="submit" value="Submit"onclick="popup()"></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <a href="Personal Portfolio Website.pdf"Download="PDF">
+            <button class="btn"><i class="fa fa-download"></i> Download My CV</button>
+            </a><br><br><br>
+            <div class="boxo">
+              <font color="white"size="3px"><center><i>powerd by@</i><b> Sahan hansaja</b><br>
+              <a href="https://www.linkedin.com/in/sahan-hansaja-35502b256" class="fa fa-linkedin"></a>
+              <a href="https://wa.me/message/QVJF3K2VJV6NP1" class="fa fa-whatsapp"></a>
+              <a href="https://instagram.com/hansaja79?igshid=ZDdkNTZiNTM=" class="fa fa-instagram"></a>
+              <br><font size="2px">
+            <i>sahanhansaja026@gmail.com</i></center></font>
+            </div>
+          </div>
+          
+          <script>
+          function sahan(evt, Name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(Name).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          </script>
+          <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+            
+    </body>
